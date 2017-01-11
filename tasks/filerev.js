@@ -67,7 +67,7 @@ module.exports = function (grunt) {
           resultPath = path.resolve(dirname, newName);
           fs.renameSync(file, resultPath);
         } else {
-          dirname = el.dest;
+          dirname = el.dest || path.dirname(file);
           resultPath = path.resolve(dirname, newName);
           grunt.file.copy(file, resultPath);
         }
