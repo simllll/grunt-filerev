@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     });
 
     eachAsync(this.files, function (el, i, next) {
-      var move = true;
+      var move = false; // always copy
 
       // If dest is furnished it should indicate a directory
       if (el.dest) {
